@@ -7,7 +7,7 @@ body {
 
 header {
     background-color: #F6B93B;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +44,7 @@ header img {
     max-width: 300px;
     height: auto;
     position: absolute;
-    bottom: -50px;
+    bottom: -100px;
 }
 
 nav {
