@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
+body {
+  background-color: #fffbe9;
+  background-image: linear-gradient(to right, #b5cce865 1px, transparent 1px),
+    linear-gradient(to bottom, #b5cce857, transparent 1px);
+  background-size: 30px 30px;
+  /* Tamanho dos quadrados */
+  z-index: -1;
+  margin: 0;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  background-color: #fefad5;
+  border-bottom: 1px solid;
+  padding-left: 200PX;
+  font-family: 'Courier New', Courier, monospace;
+  gap: 30px;
+  font-size: 10px;
+  height: 70px;
+  
+}
+.nav-button {
+  --bg: #b5cce8;
+  --hover-bg: #fbbbce;
+  --hover-text: #000;
+  color: black;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.nav-button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem black;
+}
+
+.nav-button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+nav{
+  display: flex;
+  gap: 30px;
+  margin-left: 25%;
+}
+
+.logo{
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+}
+.janela {
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: #fff3d7;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  border: 1px solid;
+  overflow: hidden;
+  height: 800px;
+  width: 150vh;
+  margin-left: 9%;
+  margin-top: 2%;
+}
+/*  Tab Bar  */
+.tab-bar {
+  height: 40px;
+  border-bottom: 1px solid;
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+  box-shadow: inset 0px 0px 2px #05050525;
+}
+.tab-bar span {
+  margin: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 160px;
+}
+.tab-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 300px;
+  gap: 15px;
+  
+}
+.minimizar {
+  background-color: #f9a59a;
+}
+.maximizar {
+  background-color: #f5fac1;
+}
+.fechar {
+  background-color: #a2f6b5;
+}
+.minimizar,
+.maximizar,
+.fechar {
+  width: 15px;
+  border: 1px solid;
+  height: 15px;
+  border-radius: 50%;
+}
+i {
+  margin-right: 10px;
+}
+.search-bar {
+  border: 0.5px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: rgb(88, 88, 88);
+  box-shadow: inset 2px 2px 2px #7941410a;
+  font-size: 14px;
+  margin-left: 15px;
+}
+/*   Side Bar   */
+.tab-container {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+}
+
+.tabs {
+  height: 100%; /* Para preencher o contêiner verticalmente */
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-right: 1px solid;
+  justify-content: center;
+  box-shadow: 0px 0px 2px #8d8a8a;
+}
+
+.tab-button {
+  background-color: transparent;
+  border: 1px solid;
+  width: 200px;
+  height: 50px;
+  margin-left: 3vh;
+  margin-right: 3vh;
+}
+.tab-button:hover{
+  background-color: #f4b7d7;
+}
+
+/*   Conteudo Sub Aba    */
+.tab-content {
+  flex-grow: 1;
+  /* O conteúdo da aba ocupará o restante do espaço */
+  padding: 20px;
+  display: none;
+}
+.sub-tab-button {
+  text-align: center;
+  background-color: #fdeec5;
+  width: 200px;
+  border: 1px solid;
+  border-bottom: none;
+  padding: 5px;
+  margin-left: 10px;
+
+}
+
+.sub-tab-button.active {
+  border-bottom: none;
+  font-weight: bold;
+  position: relative;
+  top: 1px;
+}
+
+.sub-tab-content {
+  display: none;
+  height: 600px;
+  overflow: hidden;
+}
+
+.sub-tab-content.active {
+  margin-left: 10px;
+}
+
+.tab-content.active,
+.sub-tab-content.active {
+  display: block;
+}
+
+.sub-tab-content.active {
+
+  border: 1px solid;
+}
+.sub-tab-content.active h3 {
+  margin-left: 60px;
+  margin-top: 60px;
+}
+details {
+  padding: 15px;
+  margin-left: 70px;
+  margin-bottom: 10px;
+  width: 80vh;
+  background-color: #fdeec5;
+  border: 1px solid;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  position: relative;
+  /* Necessário para o posicionamento absoluto dos ícones */
+  padding-left: 3em;
+  /* Adiciona espaço suficiente para o ícone */
+}
+/* Estilo para ambos os ícones */
+.pasta-fechada,
+.pasta-aberta {
+  width: 35px;
+  padding-right: 15px;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  left: 0;
+  /* Alinha à esquerda do <summary> */
+}
+/* Ícone de pasta fechada (inicialmente visível) */
+.pasta-fechada {
+  opacity: 1;
+  /* Visível inicialmente */
+}
+
+/* Ícone de pasta aberta (inicialmente invisível) */
+.pasta-aberta {
+  opacity: 0;
+  /* Invisível inicialmente */
+}
+
+/* Quando o <details> está aberto */
+details[open] .pasta-fechada {
+  opacity: 0;
+  /* Esconde a imagem de pasta fechada */
+}
+
+details[open] .pasta-aberta {
+  opacity: 1;
+  /* Exibe a imagem de pasta aberta */
+}
+/*    content   */
+.initial-content {
+  height: 600px;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 30px;
+}
+
+.search-bar2 {
+  border: 0.5px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  width: 50%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: rgb(88, 88, 88);
+  box-shadow: inset 2px 2px 2px #05050525;
+  font-size: 14px;
+  margin-left: 15px;
+}
+/*   cat     */
+
+.scene {
+  position: relative;
+  width: auto;
+  /* Tamanho da cena */
+  height: 100px;
+  /* Tamanho da cena */
+  overflow: hidden;
+  /* Esconde o que sai fora da cena */
+  top: 35px;
+}
+
+.aba {
+  height: 380px;
+}
+
+.background {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 32px;
+  /* Tamanho da imagem do chão */
+  background-image: url("/assets/back.png");
+  background-repeat: repeat-x;
+  /* Repetir o fundo horizontalmente */
+}
+
+@keyframes move-background {
+  100% {
+    background-position: 300px;
+    /* Faz o fundo rolar */
+  }
+}
+
+.cat-sprite {
+  position: relative;
+  bottom: 15px;
+  width: 3px;
+  height: auto;
+  animation: move-cat 20s linear infinite;
+  /* Faz o gato se mover */
+}
+
+/* Animação para mover o gato só para a direita e resetar no final */
+@keyframes move-cat {
+  0% {
+    left: -200px;
+  }
+
+  100% {
+    left: calc(120% - 190px);
+    /* Gato vai para o fim e reinicia */
+  }
+}
+
+/*       Titulo        */
+
+/* Cores em tons pasteis inspirados no logo do Google */
+.letra-1 {
+  color: #f4cccc; /* Pastel Red */
+  text-shadow: 1px 1px 0 black;
+}
+
+.letra-2 {
+  color: #ffe599; /* Pastel Yellow */
+  text-shadow: 1px 1px 0 black;
+}
+
+.letra-3 {
+  color: #c9daf8; /* Pastel Blue */
+  text-shadow: 1px 1px 0 black;
+}
+
+.letra-4 {
+  color: #b6d7a8; /* Pastel Green */
+  text-shadow: 1px 1px 0 black;
+}
+
+.letra-5 {
+  color: #c9daf8; /* Pastel Blue */
+  text-shadow: 1px 1px 0 black;
+}
+
+.letra-6 {
+  color: #ffe599; /* Pastel Yellow */
+  text-shadow: 1px 1px 0 black;
+}
+/* Cores em tons pasteis inspirados no logo do Google */
+.letra-7 {
+  color: #f4cccc; /* Pastel Red */
+  text-shadow: 1px 1px 0 black;
+}
+
+.letra-8 {
+  color: #ffe599; /* Pastel Yellow */
+  text-shadow: 1px 1px 0 black;
+}
+
+.letra-9 {
+  color: #c9daf8; /* Pastel Blue */
+  text-shadow: 1px 1px 0 black;
+}
+
+.letra-10 {
+  color: #b6d7a8; /* Pastel Green */
+  text-shadow: 1px 1px 0 black;
+}
+
+.letra-11 {
+  color: #c9daf8; /* Pastel Blue */
+  text-shadow: 1px 1px 0 black;
+}

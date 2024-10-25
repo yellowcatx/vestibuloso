@@ -26,14 +26,14 @@ tabButtons.forEach(button => {
                 firstSubTabContent.classList.add('active');
             }
         }
-    }); 
+    });
 });
+
 // Controle das Sub-Abas
 const subTabButtons = document.querySelectorAll('.sub-tab-button');
 const subTabContents = document.querySelectorAll('.sub-tab-content');
 
-//quando clicado 
-
+// Quando clicado
 subTabButtons.forEach(button => {
     button.addEventListener('click', () => {
         subTabButtons.forEach(btn => btn.classList.remove('active'));
@@ -42,6 +42,7 @@ subTabButtons.forEach(button => {
         document.getElementById(button.dataset.subtab).classList.add('active');
     });
 });
+
 // Controle das Pastas
 document.querySelectorAll('.folder-toggle').forEach(function(folder) {
     folder.addEventListener('click', function() {
@@ -56,56 +57,28 @@ document.querySelectorAll('.folder-toggle').forEach(function(folder) {
     });
 });
 
-
-
-
-function openTab(evt, tabName) {
-    var i, tab, tabLink;
-    tab = document.getElementsByClassName("tab");
-    for (i = 0; i < tab.length; i++) {
-      tab[i].style.display = "none";
-    }
-    tabLink = document.getElementsByClassName("tab-link");
-    for (i = 0; i < tabLink.length; i++) {
-      tabLink[i].className = tabLink[i].className.replace(" tab-active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " tab-active";
-  }
-  document.getElementById('toggle-dark-mode').addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+// Dropdown
+document.querySelector('.dropdown-button').addEventListener('click', function() {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
 });
 
-// Carregar preferências do usuário
-window.onload = function() {
-    const darkModeEnabled = localStorage.getItem('dark-mode') === 'true';
-    if (darkModeEnabled) {
-        document.body.classList.add('dark-mode');
+window.addEventListener('click', function(event) {
+    if (!event.target.matches('.dropdown-button')) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        if (dropdownContent.style.display === 'block') {
+            dropdownContent.style.display = 'none';
+        }
     }
-};
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('.sidebar-list a');
-  const iframe = document.getElementById('video-player');
-  
-  links.forEach(link => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const videoUrl = link.getAttribute('data-video');
-      if (videoUrl) {
-        iframe.src = videoUrl;
-      }
-    });
-  });
 });
 
+// Timer
 const timerDisplay = document.getElementById('timerDisplay');
 const startBtn = document.getElementById('startBtn');
 const resetBtn = document.getElementById('resetBtn');
 
 let timer;
-let timeLeft = 15 * 60; // 25 minutos
+let timeLeft = 15 * 60;
 
 function updateDisplay() {
     const minutes = Math.floor(timeLeft / 60);
@@ -134,9 +107,3 @@ startBtn.addEventListener('click', startTimer);
 resetBtn.addEventListener('click', resetTimer);
 
 updateDisplay();
-// script.js
-
-function toggleSidebar() {
-  const sidebar = document.getElementById('sidebar');
-  sidebar.classList.toggle('open-sidebar');
-}
