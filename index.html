@@ -5,63 +5,150 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/css/style.css">
-  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
   <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
   <title>Vestibuloso</title>
 </head>
 
 <body>
-
-  <header class="navbar">
-    <div class="logo">
-      <img src="/assets/PC bunny headphones.ico" alt width="30px">
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="/assets/favicon.ico" alt="Logo" width="30px">
+      </div>
+      <nav>
+        <button class="nav-button" id="home-button" onclick="ativarBotao(this)"><a href="#">Home</a></button>
+        <button class="nav-button" onclick="ativarBotao(this)"><a href="pages/aulas.html">Aulas</a></button>
+        <button class="nav-button" onclick="ativarBotao(this)"><a href="pages/provas.html">Provas</a></button>
+        <button class="nav-button" onclick="ativarBotao(this)" ><a href="#section3">Sobre Nós</a></button>
+      </nav>
     </div>
-    <H1>VESTIBULOSO</H1>
-    <nav>
-      <button class="nav-button"><a href="#">Home</a></button>
-      <button class="nav-button"><a href="aulas.html">Aulas</a></button>
-      <button class="nav-button"><a href="provas.html">Provas</a></button>
-      <button class="nav-button"><a href="#rodape">Sobre Nós</a></button>
-    </nav>
   </header>
 
-  <section class="section-1" id="bounce-in-left">
-    <div class="content">
-      <div class="content-text">
-        <h2>Olá, Vestibulosos!</h2>
-        <p>
-          Aqui você encontrará uma seleção dos melhores canais do YouTube para
-          videoaulas, além de acesso a provas de vestibulares passados e dicas
-          valiosas para aprimorar seus estudos.
-        </p>
-        <button>Iniciar <i class="fa-regular fa-arrow-right"></i></button>
+
+  <section class="section1" id="img">
+    <div id="home">
+      <div class="asset1">
+        <img src="assets/Black & White Minimalist Business Logo (7).png" alt="" width="200px">
       </div>
-      <img src="/assets/aa.png" alt="" width="500px" class="imagem">
+      <div class="dialog_box">
+        <h1 class="titulo">Olá Vestibulosos</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias placeat velit provident! Minima
+          amet explicabo quam, facere nihil pariatur voluptate sapiente sed rem beatae illum itaque consequuntur
+          molestias at!Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolorem, reiciendis
+          tenetur
+          dignissimos ipsa quibusdam architecto similique, inventore laboriosam voluptatem, facere iste ratione sunt!
+          Quae error quisquam est ea deserunt
+        </p>
+      </div>
+    </div>
+    <button id="section-button" onclick="scrollToSection()"><img width="30" height="30"
+        src="https://img.icons8.com/ios-glyphs/30/expand-arrow--v1.png" alt="expand-arrow--v1" /></button>
+  </section>
+
+
+
+  <section class="section2" id="minha-secao">
+    <div id="home2">
+      <div class="wrapper">
+        <div class="dialog_box2">
+          <h1 class="titulo">Olá Vestibulosos</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias placeat velit provident! Minima
+            amet explicabo quam, facere nihil pariatur voluptate sapiente sed rem beatae illum itaque consequuntur
+            molestias at!Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolorem, reiciendis
+            tenetur
+            dignissimos ipsa quibusdam architecto similique, inventore laboriosam voluptatem, facere iste ratione sunt!
+            Quae error quisquam est ea deserunt
+          </p>
+        </div>
+        <div class="asset2">
+          <img src="/assets/'.png" alt="" width="200px">
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card" style="background-color: #C0E5FA;">
+          <div class="content">
+            <p class="heading">Card</p>
+            <p class="para">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam
+              at voluptas minus culpa deserunt delectus sapiente inventore pariatur.
+            </p>
+            <button>IR <i class="fa-light fa-angle-right fa-xl" style="color: #ffffff;"></i></button>
+          </div>
+        </div>
+        <div class="card" style="background-color: #F8F8C7;">
+          <div class="content">
+            <p class="heading">Card</p>
+            <p class="para">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam
+              at voluptas minus culpa deserunt delectus sapiente inventore pariatur.
+            </p>
+            <button>IR <i class="fa-light fa-angle-right fa-xl" style="color: #ffffff;"></i></button>
+          </div>
+        </div>
+        <div class="card" style="background-color: #FFD6D8;">
+          <div class="content">
+            <p class="heading">Card</p>
+            <p class="para">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam
+              at voluptas minus culpa deserunt delectus sapiente inventore pariatur.
+            </p>
+            <button>IR <i class="fa-light fa-angle-right fa-xl" style="color: #ffffff;"></i></button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section-2">
-    <footer>
-      <div class="footer-content">
-        <div class="footer-text">
-          <h1>Sobre Nós</h1>
-          <p> Um grupo de alunos do terceiro ano de Mecatrônica
-            está desenvolvendo um projeto para facilitar a jornada de estudos dos
-            estudantes que irão prestar vestibulares no último ano do ensino médio.
-            O projeto consiste em um site programático que reunirá videoaulas,
-            provas de vestibulares anteriores e dicas essenciais para uma preparação
-            eficaz. A proposta é proporcionar um recurso completo e acessível,
-            demonstrando que todos têm a chance de alcançar seus objetivos
-            acadêmicos.</p>
-        </div>
-        <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved VESTIBULOSO
-        </p>
-        <div>
 
+
+
+
+
+
+
+  <section class="section3" id="section3">
+    <div class="footer">
+      <div class="footer-img"><img src="assets/Black & White Minimalist Business Logo(9).png" alt=""></div>
+      <div class="home3">
+        <div class="footer-text">
+          <h1 class="titulo">Sobre Nós</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias placeat velit provident! Minima
+            amet explicabo quam, facere nihil pariatur voluptate sapiente sed rem beatae illum itaque consequuntur
+            molestias at!Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolorem, reiciendis
+            tenetur
+            dignissimos ipsa quibusdam architecto similique, inventore laboriosam voluptatem, facere iste ratione sunt!
+            Quae error quisquam est ea deserunt
+          </p>
+          <span>© All copyrights reserved</span>
         </div>
       </div>
-    </footer>
+    </div>
   </section>
+
+
+
+
+
+
+
+
+
+  <script>
+    function ativarBotao(botao) {
+      // Remove a classe "ativo" de todos os botões
+      document.querySelectorAll('.nav-button').forEach(button => button.classList.remove('ativo'));
+
+      // Adiciona a classe "ativo" ao botão clicado
+      botao.classList.add('ativo');
+    }
+
+    function scrollToSection() {
+      const section = document.getElementById('minha-secao');
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+
+  </script>
 </body>
 
 </html>
