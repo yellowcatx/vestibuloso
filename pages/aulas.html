@@ -12,7 +12,6 @@
 <body>
   <section class="layout">
 
-
     <!-- Menu de Disciplinas -->
     <div class="leftSide">
       <h1>Disciplinas</h1>
@@ -21,7 +20,6 @@
             style="margin-right: 20px;"></i> Matemática</button>
         <button onclick="openSubject(event, 'portugues')"><i class="fa-regular fa-book-font fa-lg"
             style="margin-right: 20px;"></i> Português</button>
-
       </div>
     </div>
 
@@ -51,240 +49,30 @@
           <div style="display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 11px;"><i class="fa-regular fa-circle-play"></i> 9 Aulas <span
                 style="font-size: 11px;"><i class="fa-regular fa-clock"></i> 1h20min</span></span>
+          </div>
 
-            <div class="container" id="infoContainer">
+          <div class="iframe-container">
+            <iframe id="math-video" src="" frameborder="0"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
 
-              <button class="close-btn" onclick="closeContainer()"><i class="fa-regular fa-x fa-sm"
-                  style="color: #000000;"></i></button>
-              <!-- Botão de fechar -->
-
-
-              <div id="welcomeContainer" style="margin:5%;">
-                <h1>Bem-vindo ao Simulado de Matemática!</h1>
-                <div style="display: flex; align-items: center; justify-content: center; line-height: 25px;">
-
-                  <p>
-                    É com muito carinho que preparamos este simulado para você! Aqui, você terá a chance de testar seus
-                    conhecimentos e ver como está se saindo nas aulas. Sabemos que o aprendizado pode ser desafiador, e
-                    é normal ter dúvidas ou dificuldades ao longo do caminho. Este simulado é uma oportunidade de rever
-                    o que aprendeu e se sentir mais confiante.
-                    <br>
-                    Lembre-se de que cada pergunta é uma chance de aprender algo novo, e os erros são apenas parte desse
-                    processo. Se você não acertar alguma questão, não se preocupe! O importante é continuar avançando e
-                    saber que cada passo que você dá conta.
-                    <br>
-
-                    Boa sorte e divirta-se!
-
-                  </p>
-                  <img src="/assets/Black & White Minimalist Business Logo(8).png" width="200px" alt="">
-                </div>
-                <button class="start-button" onclick="startQuiz()">Começar</button>
-              </div>
-              <form id="quizForm" style="display: none;">
-                <div class="question active" id="question1" style="position:relative; top: 100px">
-                  <strong>
-                    <p>1. Qual é a solução da equação 2x + 4 = 20?</p>
-                  </strong>
-                  <div class="choices">
-                    <input type="radio" name="q1" value="8x" id="q1a" required>
-                    <label for="q1a">8x</label>
-                    <input type="radio" name="q1" value="11" id="q1b">
-                    <label for="q1b">11</label>
-                    <input type="radio" name="q1" value="10" id="q1c">
-                    <label for="q1c">10</label>
-                    <input type="radio" name="q1" value="9" id="q1d">
-                    <label for="q1d">9</label>
-                  </div>
-                  <button type="button" class="start-button" onclick="nextQuestion(1)">Próxima</button>
-                </div>
-                <div class="question" id="question2" style="position:relative; top: 100px">
-                  <strong>
-                    <p>2. Qual é o valor de 5 + 6?</p>
-                  </strong>
-                  <div class="choices">
-                    <input type="radio" name="q2" value="10" id="q2a" required>
-                    <label for="q2a">10</label>
-                    <input type="radio" name="q2" value="11" id="q2b">
-                    <label for="q2b">11</label>
-                    <input type="radio" name="q2" value="12" id="q2c">
-                    <label for="q2c">12</label>
-                    <input type="radio" name="q2" value="13" id="q2d">
-                    <label for="q2d">13</label>
-                  </div>
-                  <button type="button" class="start-button" onclick="nextQuestion(2)">Próxima</button>
-                </div>
-                <div class="question" id="question3" style="position:relative; top: 100px">
-                  <strong>
-                    <p>3. Se 3x = 15, qual é o valor de x?</p>
-                  </strong>
-                  <div class="choices">
-                    <input type="radio" name="q3" value="3" id="q3a" required>
-                    <label for="q3a">3</label>
-                    <input type="radio" name="q3" value="4" id="q3b">
-                    <label for="q3b">4</label>
-                    <input type="radio" name="q3" value="5" id="q3c">
-                    <label for="q3c">5</label>
-                    <input type="radio" name="q3" value="6" id="q3d">
-                    <label for="q3d">6</label>
-                  </div>
-                  <button type="button" class="start-button" onclick="nextQuestion(3)">Próxima</button>
-                </div>
-                <div class="question" id="question4" style="position:relative; top: 100px">
-                  <strong>
-                    <p>4. Qual é o resultado de 10 - 3 + 5?</p>
-                  </strong>
-                  <div class="choices">
-                    <input type="radio" name="q4" value="12" id="q4a" required>
-                    <label for="q4a">12</label>
-                    <input type="radio" name="q4" value="13" id="q4b">
-                    <label for="q4b">13</label>
-                    <input type="radio" name="q4" value="19" id="q4c">
-                    <label for="q4c">19</label>
-                    <input type="radio" name="q4" value="15" id="q4d">
-                    <label for="q4d">15</label>
-                  </div>
-                  <button type="button" class="start-button" onclick="nextQuestion(4)">Próxima</button>
-                </div>
-                <div class="question" id="question5" style="position:relative; top: 100px">
-                  <strong>
-                    <p>5. O que é 25% de 20?</p>
-                  </strong>
-                  <div class="choices">
-                    <input type="radio" name="q5" value="5" id="q5a" required>
-                    <label for="q5a">5</label>
-                    <input type="radio" name="q5" value="10" id="q5b">
-                    <label for="q5b">10</label>
-                    <input type="radio" name="q5" value="15" id="q5c">
-                    <label for="q5c">15</label>
-                    <input type="radio" name="q5" value="20" id="q5d">
-                    <label for="q5d">20</label>
-                  </div>
-                  <button type="button" class="start-button" onclick="nextQuestion(5)">Próxima</button>
-                </div>
-                <div class="question" id="question6" style="position:relative; top: 100px">
-                  <strong>
-                    <p>6. O que significa a variável x em uma equação?</p>
-                  </strong>
-                  <div class="choices">
-                    <input type="radio" name="q6" value="O número multiplicado pela variável" id="q6a" required>
-                    <label for="q6a">O número multiplicado pela variável</label>
-                    <input type="radio" name="q6" value="Um valor fixo" id="q6b">
-                    <label for="q6b">Um valor fixo</label>
-                    <input type="radio" name="q6" value="O resultado de uma operação" id="q6c">
-                    <label for="q6c">O resultado de uma operação</label>
-                    <input type="radio" name="q6" value="Um número inteiro" id="q6d">
-                    <label for="q6d">Um número inteiro</label>
-                  </div>
-                  <button type="button" class="start-button" onclick="nextQuestion(6)">Próxima</button>
-                </div>
-                <div class="question" id="question7" style="position:relative; top: 100px">
-                  <strong>
-                    <p>7. Se x = 2, qual é o valor de 2x + 10?</p>
-                  </strong>
-                  <div class="choices">
-                    <input type="radio" name="q7" value="10" id="q7a" required>
-                    <label for="q7a">10</label>
-                    <input type="radio" name="q7" value="12" id="q7b">
-                    <label for="q7b">12</label>
-                    <input type="radio" name="q7" value="14" id="q7c">
-                    <label for="q7c">14</label>
-                    <input type="radio" name="q7" value="16" id="q7d">
-                    <label for="q7d">16</label>
-                  </div>
-                  <button type="button" class="start-button" onclick="nextQuestion(7)">Próxima</button>
-                </div>
-                <div class="question" id="question8" style="position:relative; top: 100px">
-                  <strong>
-                    <p>8. Qual é a raiz quadrada de 64?</p>
-                  </strong>
-                  <div class="choices">
-                    <input type="radio" name="q8" value="6" id="q8a" required>
-                    <label for="q8a">6</label>
-                    <input type="radio" name="q8" value="7" id="q8b">
-                    <label for="q8b">7</label>
-                    <input type="radio" name="q8" value="8" id="q8c">
-                    <label for="q8c">8</label>
-                    <input type="radio" name="q8" value="9" id="q8d">
-                    <label for="q8d">9</label>
-                  </div>
-                  <button type="button" class="start-button" onclick="nextQuestion(8)">Próxima</button>
-                </div>
-                <div class="question" id="question9" style="position:relative; top: 100px">
-                  <strong>
-                    <p>9. O que é 1/4 de 100?</p>
-                  </strong>
-                  <div class="choices">
-                    <input type="radio" name="q9" value="20" id="q9a" required>
-                    <label for="q9a">20</label>
-                    <input type="radio" name="q9" value="25" id="q9b">
-                    <label for="q9b">25</label>
-                    <input type="radio" name="q9" value="30" id="q9c">
-                    <label for="q9c">30</label>
-                    <input type="radio" name="q9" value="40" id="q9d">
-                    <label for="q9d">40</label>
-                  </div>
-                  <button type="button" class="start-button" onclick="nextQuestion(9)">Próxima</button>
-                </div>
-                <div class="question" id="question10" style="position:relative; top: 100px">
-                  <strong>
-                    <p>10. Qual é a soma dos ângulos internos de um triângulo?</p>
-                  </strong>
-                  <div class="choices">
-                    <input type="radio" name="q10" value="90°" id="q10a" required>
-                    <label for="q10a">90°</label>
-                    <input type="radio" name="q10" value="180°" id="q10b">
-                    <label for="q10b">180°</label>
-                    <input type="radio" name="q10" value="270°" id="q10c">
-                    <label for="q10c">270°</label>
-                    <input type="radio" name="q10" value="360°" id="q10d">
-                    <label for="q10d">360°</label>
-                  </div>
-                  <button type="button" class="start-button" onclick="calculateResults()">Finalizar</button>
-                </div>
-              </form>
-              <div id="resultContainer" class="result-container" style="position:relative; top: 100px">
-                <h2>Resultados</h2>
-                <p id="resultMessage"></p>
-                <button class="start-button" onclick="restartQuiz()">Reiniciar</button>
-              </div>
-            </div>
-
-            <button class="button" id="toggleButton" onclick="toggleContainer()">Atividade</button>
+          <div class="text-content">
+            <h2>Disciplina: Introdução à Álgebra para o ENEM! 📘✨</h2>
+            <p>
+              Seja bem-vindo(a) à disciplina que vai ajudar a dominar Álgebra de forma prática e focada para o ENEM! Vamos explorar conceitos essenciais como operações básicas, equações, expressões algébricas e sistemas lineares, sempre com exercícios e exemplos para facilitar o aprendizado.
+              A cada aula, o conteúdo será voltado para estratégias que ajudam a ganhar tempo e precisão nas questões do ENEM. E, para finalizar, teremos um aulão especial de Matemática com uma revisão dos tópicos mais cobrados e dicas para resolver questões com confiança.
+              Vamos nessa para garantir uma base forte e aumentar suas chances de sucesso no exame!
+            </p>
+            <h2>O que vai aprender?</h2>
+            <ol>
+              <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Definição e Diferença </li>
+              <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Expressões Algébricas </li>
+              <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Operações com Variáveis </li>
+              <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Funções Básicas </li>
+              <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Sistema de Equações </li>
+            </ol>
           </div>
         </div>
-
-        <div class="iframe-container">
-          <iframe id="video-player" src="" frameborder="0"
-            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="text-content">
-
-          <h2>Disciplina: Introdução à Álgebra para o ENEM! 📘✨</h2>
-          <p>
-
-            Seja bem-vindo(a) à disciplina que vai ajudar a dominar Álgebra de forma prática e focada para o ENEM! Vamos
-            explorar conceitos essenciais como operações básicas, equações, expressões algébricas e sistemas lineares,
-            sempre com exercícios e exemplos para facilitar o aprendizado.
-
-            A cada aula, o conteúdo será voltado para estratégias que ajudam a ganhar tempo e precisão nas questões do
-            ENEM. E, para finalizar, teremos um aulão especial de Matemática com uma revisão dos tópicos mais cobrados e
-            dicas para resolver questões com confiança.
-
-            Vamos nessa para garantir uma base forte e aumentar suas chances de sucesso no exame!
-
-          </p>
-          <h2>O que vai aprender?</h2>
-          <ol>
-            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Definição e Diferença </li>
-            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Expressões Algébricas </li>
-            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Operações com Variáveis </li>
-            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Funções Básicas </li>
-            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Sistema de Equações </li>
-          </ol>
-        </div>
-
       </div>
 
       <!--- Portugues -->
@@ -305,18 +93,29 @@
         </div>
 
         <div class="iframe-container">
-          <iframe id="video-player" src="" frameborder="0"
+          <iframe id="portuguese-video" src="" frameborder="0"
             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="text-content">
-          <h2>Lorem, ipsum.</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            consequuntur eligendi exercitationem repudiandae ipsum debitis officiis harum in consectetur officia
-            nesciunt consequatur voluptates, repellendus neque hic numquam facere est, autem placeat. Veniam,
-            praesentium minima! Neque, iure nihil?</p>
+          <h2>Disciplina: Português para o ENEM! 📖✨</h2>
+          <p>
+            Bem-vindo(a) à disciplina de Português, onde vamos aprofundar nossos conhecimentos para arrasar no ENEM! Nesta jornada, abordaremos temas essenciais como gramática, interpretação de textos, produção textual e análise literária, sempre com exemplos e exercícios práticos que facilitam a aprendizagem.
+            A cada aula, focaremos em estratégias que ajudam a resolver questões do ENEM com agilidade e precisão. No final do curso, teremos uma aula especial com uma revisão dos principais tópicos e dicas valiosas para garantir sua confiança na hora da prova.
+            Vamos juntos fortalecer sua base em Português e aumentar suas chances de sucesso no exame!
+          </p>
+          <h2>O que vai aprender?</h2>
+          <ol>
+            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Análise Sintática e Morfológica</li>
+            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Gêneros Textuais</li>
+            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Interpretação de Texto</li>
+            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Ortografia e Acentuação</li>
+            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Produção Textual</li>
+          </ol>
         </div>
+        
       </div>
     </div>
+    
 
     <!-- Lista de Aulas (Específica para cada Disciplina) -->
     <div class="rightSide">
@@ -345,162 +144,120 @@
           <ul>
             <li><a href="#" data-video="https://www.youtube.com/embed/iz68JiWWIcY?si=R22r01uCLXMKMXak">Aula 1:
                 POLINÔMIOS <span>10 min</span></a></li>
-            <li><a href="#" data-video="https://www.youtube.com/embed/pi8vdPACPoI?si=IlADdz9pQ5q2sBxu">Aula 2: EQUAÇÕES
-                COM EXPOENTES <span> 9 min</span></a></li>
-            <li><a href="#" data-video="https://www.youtube.com/embed/j1M641MRasM?si=BwDRslfmM1dh0Uto">Aula 3: EQUAÇÕES
-                COM DUAS VARIÁVEIS <span>7 min</span></a></li>
-            <li><a href="#" data-video="https://www.youtube.com/embed/uNtO-ChhKZw?si=ymdCM_FQ2hoJJXFl">Aula 4: REGRA DE
-                TRÊS <span> 11 min</span></a></li>
-          </ul>
-        </details>
-        <details>
-          <summary><span class="title">03: Aulão</span> <span class="time">15 min</span> <span class="icone"><i
-                class="fa fa-chevron-right rotate-icon"></i></span></summary>
-          <ul>
-            <li><a href="#" data-video="https://www.youtube.com/embed/iz68JiWWIcY?si=R22r01uCLXMKMXak">Aula 1: AULÃO
-                <span>6 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/fwum-dRcpa0?si=mV1Ctno9BKMYuWNX">Aula 2:
+              EQUAÇÕES COM DUAS VARIÁVEIS<span>7 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/pi8vdPACPoI?si=MR_Qb92VIDC4aew1">Aula 3:
+              EQUAÇÕES COM EXPOENTES<span>7 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/uNtO-ChhKZw?si=lWImWjN0wpnFmxZD">Aula 4:
+              REGRA DE TRÊS<span>7 min</span></a></li>
           </ul>
         </details>
       </div>
 
       <!-- Aulas de Português -->
-
       <div id="portugues-lessons" class="lesson-content">
-        <h2 style="margin-left: 10px;">Aulas</h2>
-        <details>
-          <summary>01: <span>15 min</span> <span class="icone"><i class="fa fa-chevron-right rotate-icon"></i></span>
-          </summary>
-          <ul>
-            <li><a href="#" data-video="https://www.youtube.com/embed/abcd1234">Aula 1: Substantivos <span>5
-                  min</span></a></li>
-            <li><a href="#" data-video="https://www.youtube.com/embed/efgh5678">Aula 2: Verbos <span>8 min</span></a>
-            </li>
+        <h2 style="margin-left: 10px; margin: 10px 10px 10px 10px;">Português</h2>
 
+        <details>
+          <summary><span class="title">01: Introdução</span> <span class="time">24 min</span> <span
+              class="icone"><i class="fa fa-chevron-right rotate-icon"></i></span></summary>
+          <ul>
+            <li><a href="#" data-video="https://www.youtube.com/embed/bMRjvAP4rgA?si=7HG7z3kaPLgYQRsU" title="YouTube video player">Aula 1: FUNÇÕES DA LINGUAGEM<span>14 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/wLifTy2UVeM?si=zBLXB94M_GCxkHsm">Aula 2: ACENTUAÇÃO <span>2 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/EnDeo-TL5nY?si=0a0DyKbr2ipm_jRG">Aula 3: VÍRGULA<span>8 min</span></a></li>
           </ul>
         </details>
 
+        <details>
+          <summary><span class="title">02: Compreensão de Texto</span> <span class="time">18 min</span> <span
+              class="icone"><i class="fa fa-chevron-right rotate-icon"></i></span></summary>
+          <ul>
+            <li><a href="#" data-video="https://www.youtube.com/embed/Y0SZhaGqdDk?si=yO19HKWwX6S0Ua3J">Aula 1:
+              PLURAL DOS SUBSTANTIVOS<span>7 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/UmWJe6FqoNk?si=NT18KUIywkxABA9Q">Aula 2: COLOCAÇÃO PRONOMINAL<span>11 min</span></a></li>
+          </ul>
+        </details>
+        
+        <details>
+          <summary><span class="title">03: Aulão</span> <span class="time">1h14 min</span> <span
+              class="icone"><i class="fa fa-chevron-right rotate-icon"></i></span></summary>
+          <ul>
+            <li><a href="#" data-video="https://www.youtube.com/embed/LMaE0gAsI04?si=mGyqSLurACuTGPu4">Aula 1: Aulão<span>1h min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/PQLzjpAxin0?si=A8-On0CyjBDDxLTT">Aula 2: FUNCÃO CONATIVA DA LINGUAGEM<span>14 min</span></a></li>
+          </ul>
+        </details>
       </div>
     </div>
+    
+    <div id="fisica-lessons" class="lesson-content">
+      <h2 style="margin-left: 10px; margin: 10px 10px 10px 10px;">Português</h2>
 
-    <div class="footer"></div>
+      <details>
+        <summary><span class="title">01: Introdução</span> <span class="time">24 min</span> <span
+            class="icone"><i class="fa fa-chevron-right rotate-icon"></i></span></summary>
+        <ul>
+          <li><a href="#" data-video="https://www.youtube.com/embed/bMRjvAP4rgA?si=7HG7z3kaPLgYQRsU" title="YouTube video player">Aula 1: FUNÇÕES DA LINGUAGEM<span>14 min</span></a></li>
+          <li><a href="#" data-video="https://www.youtube.com/embed/wLifTy2UVeM?si=zBLXB94M_GCxkHsm">Aula 2: ACENTUAÇÃO <span>2 min</span></a></li>
+          <li><a href="#" data-video="https://www.youtube.com/embed/EnDeo-TL5nY?si=0a0DyKbr2ipm_jRG">Aula 3: VÍRGULA<span>8 min</span></a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><span class="title">02: Compreensão de Texto</span> <span class="time">18 min</span> <span
+            class="icone"><i class="fa fa-chevron-right rotate-icon"></i></span></summary>
+        <ul>
+          <li><a href="#" data-video="https://www.youtube.com/embed/Y0SZhaGqdDk?si=yO19HKWwX6S0Ua3J">Aula 1:
+            PLURAL DOS SUBSTANTIVOS<span>7 min</span></a></li>
+          <li><a href="#" data-video="https://www.youtube.com/embed/UmWJe6FqoNk?si=NT18KUIywkxABA9Q">Aula 2: COLOCAÇÃO PRONOMINAL<span>11 min</span></a></li>
+        </ul>
+      </details>
+      
+      <details>
+        <summary><span class="title">03: Aulão</span> <span class="time">1h14 min</span> <span
+            class="icone"><i class="fa fa-chevron-right rotate-icon"></i></span></summary>
+        <ul>
+          <li><a href="#" data-video="https://www.youtube.com/embed/LMaE0gAsI04?si=mGyqSLurACuTGPu4">Aula 1: Aulão<span>1h min</span></a></li>
+          <li><a href="#" data-video="https://www.youtube.com/embed/PQLzjpAxin0?si=A8-On0CyjBDDxLTT">Aula 2: FUNCÃO CONATIVA DA LINGUAGEM<span>14 min</span></a></li>
+        </ul>
+      </details>
+    </div>
+  </div>
   </section>
 
-  <!-- Script -->
   <script>
-    function openSubject(event, subject) {
-      // Ativando o conteúdo da disciplina e das lições
-      const subjects = document.querySelectorAll('.subject-content');
-      const lessons = document.querySelectorAll('.lesson-content');
-      const buttons = document.querySelectorAll('.buttons button');
+    function openSubject(evt, subjectName) {
+      const subjectContents = document.querySelectorAll('.subject-content');
+      subjectContents.forEach(content => {
+        content.classList.remove('active');
+      });
+      document.getElementById(subjectName).classList.add('active');
 
-      subjects.forEach((content) => content.classList.remove('active'));
-      lessons.forEach((lesson) => lesson.classList.remove('active'));
-      buttons.forEach((button) => button.classList.remove('active'));
-
-      document.getElementById(subject).classList.add('active');
-      document.getElementById(`${subject}-lessons`).classList.add('active');
-      event.currentTarget.classList.add('active');
+      const lessonContents = document.querySelectorAll('.lesson-content');
+      lessonContents.forEach(content => {
+        content.style.display = 'none';
+      });
+      document.getElementById(subjectName + '-lessons').style.display = 'block';
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('.lesson-content a');
-      const iframe = document.getElementById('video-player');
-
-      links.forEach(link => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault();
-          const videoUrl = link.getAttribute('data-video');
-          iframe.src = videoUrl;
-        });
+    // Adiciona evento de clique para cada link da lista de aulas de Matemática
+    const mathLinks = document.querySelectorAll('#matematica-lessons a');
+    mathLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        const videoSrc = this.getAttribute('data-video');
+        const mathIframe = document.getElementById('math-video');
+        mathIframe.src = videoSrc; // Altera a fonte do iframe para o vídeo correspondente
       });
     });
 
-
-
-
-    function toggleContainer() {
-      const container = document.getElementById('infoContainer');
-      const button = document.getElementById('toggleButton');
-
-      // Alterna a exibição do container e do botão
-      const isVisible = container.style.display !== 'none' && container.style.display !== '';
-      container.style.display = isVisible ? 'none' : 'block'; // Mostra ou esconde o container
-      button.style.display = isVisible ? 'block' : 'none'; // Mostra ou esconde o botão
-    }
-
-    function closeContainer() {
-      const container = document.getElementById('infoContainer');
-      const button = document.getElementById('toggleButton');
-
-      container.style.display = 'none'; // Esconde o container
-      button.style.display = 'block'; // Mostra o botão
-    }
-
-    let currentQuestion = 0;
-    const totalQuestions = 10;
-
-    function startQuiz() {
-      document.getElementById("welcomeContainer").style.display = "none";
-      document.getElementById("quizForm").style.display = "block";
-      currentQuestion = 1;
-      showQuestion(currentQuestion);
-    }
-
-    function showQuestion(questionNumber) {
-      document.querySelectorAll(".question").forEach(q => q.classList.remove("active")); // Esconde todas as perguntas
-      const currentQuestionElement = document.getElementById(`question${questionNumber}`);
-      if (currentQuestionElement) {
-        currentQuestionElement.classList.add("active"); // Mostra a pergunta atual
-      }
-    }
-
-    function nextQuestion() {
-      const selectedAnswer = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
-
-      if (!selectedAnswer) {
-        alert("Por favor, selecione uma resposta.");
-        return;
-      }
-
-      currentQuestion++; // Incrementa o número da pergunta
-      if (currentQuestion <= totalQuestions) {
-        showQuestion(currentQuestion);
-      } else {
-        calculateResults();
-      }
-    }
-
-    function calculateResults() {
-      document.getElementById("quizForm").style.display = "none";
-      document.getElementById("resultContainer").style.display = "flex";
-
-      let score = 0;
-      const answers = ["8x", "11", "5", "12", "5", "O número multiplicado pela variável", "14", "8", "25", "180°"];
-
-      answers.forEach((answer, index) => {
-        if (document.querySelector(`input[name="q${index + 1}"]:checked`)?.value === answer) {
-          score++;
-        }
+    // Adiciona evento de clique para cada link da lista de aulas de Português
+    const portugueseLinks = document.querySelectorAll('#portugues-lessons a');
+    portugueseLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        const videoSrc = this.getAttribute('data-video');
+        const portugueseIframe = document.getElementById('portuguese-video');
+        portugueseIframe.src = videoSrc; // Altera a fonte do iframe para o vídeo correspondente
       });
-
-      const resultMessage = `Você acertou ${score} de ${totalQuestions} perguntas!`;
-      document.getElementById("resultMessage").textContent = resultMessage;
-    }
-
-    function restartQuiz() {
-      document.getElementById("resultContainer").style.display = "none";
-      document.getElementById("welcomeContainer").style.display = "block";
-      currentQuestion = 1; // Reinicia o número da pergunta
-      document.querySelectorAll(".question").forEach(q => q.classList.remove("active"));
-      document.querySelectorAll('input[type="radio"]:checked').forEach(input => input.checked = false);
-    }
-
-
-
-
-
-
-
+    });
   </script>
 </body>
 
