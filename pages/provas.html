@@ -1,353 +1,531 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/pages/css/provas_style.css" />
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
-    />
+<html lang="pt-br">
 
-    <title>Vestibuloso</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="./css/PC bunny headphones.ico" alt="" width="30px">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/provas_style.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+  <title>VESTIBULOSO</title>
+
+</head>
+
+<body>
+
+  <section class="layout">
+    <div class="sidebar">
+      <div class="title">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="toggleDropdown()">Menu</button>
+          <div class="dropdown-content" id="dropdownMenu">
+            <a href="/index.html">Home</a>
+            <a href="/pages/aulas.html">Aulas</a>
+          </div>
+        </div>
+        <img src="/assets/minimalist.png" width="100px" alt="" style="border-bottom: 1px solid;">
       </div>
-      <h1>VESTIBULOSO</h1>
-      <nav>
-        <button  class="nav-button"><a href=""></a>Home</button>
-        <button  class="nav-button"><a href=""></a>Aulas</button>
-        <button  class="nav-button"> <a href=""></a>Sobre Nós</button>
-      </nav>
-    </header>
-    <div class="janela">
+
+      <div class="group">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+          <g>
+            <path
+              d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+            </path>
+          </g>
+        </svg>
+        <input id="query" class="input" type="search" placeholder="Search..." name="searchbar" />
+      </div>
+
       <div class="tab-bar">
-        <span>Provas.exe</span>
-        <i class="fa-duotone fa-solid fa-chevron-left"></i>
-        <i class="fa-solid fa-chevron-right"></i>
-        <div class="search-bar">
-          <i class="fa-duotone fa-solid fa-magnifying-glass"></i>search
-        </div>
-        <div class="tab-buttons">
-          <div class="minimizar"></div>
-          <div class="maximizar"></div>
-          <div class="fechar"></div>
-          <!-- Fechamento de .fechar -->
-        </div>
-        <!-- Fechamento de .tab-buttons -->
+        <button class="tab active" onclick="showContent('content1')">
+          <i class="fa-duotone fa-solid fa-square-poll-horizontal fa-xl"></i> &nbsp;Enem 2023
+        </button>
+        <button class="tab" onclick="showContent('content2')">
+          <i class="fa-duotone fa-solid fa-square-poll-horizontal fa-xl"></i> &nbsp;Enem 2022
+        </button>
       </div>
-      <div class="tab-container">
-        <!-- Abas Principais -->
-        <div class="tabs">
-          <button class="tab-button active" data-tab="tab1">Sobre</button>
-          <button class="tab-button" data-tab="tab2">2023</button>
-          <button class="tab-button" data-tab="tab3">2022</button>
-        </div>
-        <!-- Fechamento de .tabs -->
-
-        <!-- Conteúdo das Abas Principais -->
-        <!-- Aba 1 -->
-        <div class="tab-content active" id="tab1">
-          <div class="initial-content">
-            <h1>
-              <span class="letra-1">V</span>
-              <span class="letra-2">e</span>
-              <span class="letra-3">s</span>
-              <span class="letra-4">t</span>
-              <span class="letra-5">i</span>
-              <span class="letra-6">b</span>
-              <span class="letra-7">u</span>
-              <span class="letra-8">l</span>
-              <span class="letra-9">o</span>
-              <span class="letra-10">s</span>
-              <span class="letra-11">o</span>
-            </h1>
-            <div class="search-bar2">
-              <i class="fa-duotone fa-solid fa-magnifying-glass"></i>search
-            </div>
-          </div>
-        </div>
-        
-        <!-- Fechamento de .tab-content (id="tab1") -->
-
-        <!-- Aba 2 -->
-        <div class="tab-content" id="tab2">
-          <h2>Provas e Gabaritos de 2023</h2>
-          <!-- Sub-Abas -->
-          <div class="sub-tabs">
-            <button class="sub-tab-button active" data-subtab="subtab1">
-              1° Dia
-            </button>
-            <button class="sub-tab-button" data-subtab="subtab2">2° Dia</button>
-          </div>
-          <!-- Fechamento de .sub-tabs -->
-
-          <!-- Conteúdo das Sub-Abas -->
-          <div class="sub-tab-content active" id="subtab1">
-            <h3>Provas</h3>
-            <div class="aba">
-              <details class="azul">
-                <summary>
-                  <img
-                    src="/assets/piy1.png"
-                    alt="Pasta Fechada"
-                    class="pasta-fechada"
-                  />
-                  <img
-                    src="/assets/piy2.png"
-                    alt="Pasta Aberta"
-                    class="pasta-aberta"
-                  />Caderno Azul
-                </summary>
-                <!-- Conteúdo da pasta -->
-                <ul class="tree">
-                  <li>
-                    <span>
-                      <img src="/pdf(2).png" alt="" width="25px" />
-                    </span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD1.pdf"
-                      target="_blank"
-                      >Prova
-                    </a>
-                  </li>
-                  <li>
-                    <span>
-                      <img src="/pdf(2).png" alt="" width="25px" />
-                    </span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD1.pdf"
-                      target="_blank"
-                      >Gabarito</a
-                    >
-                  </li>
-                </ul>
-              </details>
-              <!-- Fechamento de details (class="azul") -->
-
-              <details class="amarelo">
-                <summary>
-                  <img
-                    src="/assets/piy1.png"
-                    alt="Pasta Fechada"
-                    class="pasta-fechada"
-                  />
-                  <img
-                    src="/assets/piy2.png"
-                    alt="Pasta Aberta"
-                    class="pasta-aberta"
-                  />Caderno Amarelo
-                </summary>
-                <ul class="tree">
-                  <li>
-                    <span><img src="/pdf(2).png" alt="" width="25px" /></span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD2.pdf"
-                      target="_blank"
-                      >Prova</a
-                    >
-                  </li>
-                  <li>
-                    <span><img src="/pdf(2).png" alt="" width="25px" /></span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD2.pdf"
-                      target="_blank"
-                      >Gabarito</a
-                    >
-                  </li>
-                </ul>
-              </details>
-              <!-- Fechamento de details (class="amarelo") -->
-
-              <details class="branco">
-                <summary>
-                  <img
-                    src="/assets/piy1.png"
-                    alt="Pasta Fechada"
-                    class="pasta-fechada"
-                  />
-                  <img
-                    src="/assets/piy2.png"
-                    alt="Pasta Aberta"
-                    class="pasta-aberta"
-                  />Caderno Branco
-                </summary>
-                <ul class="tree">
-                  <li>
-                    <span><img src="/pdf(2).png" alt="" width="25px" /></span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD3.pdf"
-                      target="_blank"
-                      >Prova</a
-                    >
-                  </li>
-                  <li>
-                    <span><img src="/pdf(2).png" alt="" width="25px" /></span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD3.pdf"
-                      target="_blank"
-                      >Gabarito</a
-                    >
-                  </li>
-                </ul>
-              </details>
-              <!-- Fechamento de details (class="branco") -->
-
-              <details class="rosa">
-                <summary>
-                  <img
-                    src="/assets/piy1.png"
-                    alt="Pasta Fechada"
-                    class="pasta-fechada"
-                  />
-                  <img
-                    src="/assets/piy2.png"
-                    alt="Pasta Aberta"
-                    class="pasta-aberta"
-                  />Caderno Rosa
-                </summary>
-                <ul class="tree">
-                  <li>
-                    <span><img src="/pdf(2).png" alt="" width="25px" /></span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD4.pdf"
-                      target="_blank"
-                      >Prova</a
-                    >
-                  </li>
-                  <li>
-                    <span><img src="/pdf(2).png" alt="" width="25px" /></span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD4.pdf"
-                      target="_blank"
-                      >Gabarito</a
-                    >
-                  </li>
-                </ul>
-              </details>
-              <!-- Fechamento de details (class="rosa") -->
-
-              <details class="azul">
-                <summary>
-                  <img
-                    src="/assets/piy1.png"
-                    alt="Pasta Fechada"
-                    class="pasta-fechada"
-                  />
-                  <img
-                    src="/assets/piy2.png"
-                    alt="Pasta Aberta"
-                    class="pasta-aberta"
-                  />Caderno Laranja
-                </summary>
-                <ul class="tree">
-                  <li>
-                    <span><img src="/pdf(2).png" alt="" width="25px" /></span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD9.pdf"
-                      target="_blank"
-                      >Prova</a
-                    >
-                  </li>
-                  <li>
-                    <span><img src="/pdf(2).png" alt="" width="25px" /></span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD9.pdf"
-                      target="_blank"
-                      >Gabarito</a
-                    >
-                  </li>
-                </ul>
-              </details>
-              <!-- Fechamento de details (class="azul") -->
-
-              <details>
-                <summary>
-                  <img
-                    src="/assets/piy1.png"
-                    alt="Pasta Fechada"
-                    class="pasta-fechada"
-                  />
-                  <img
-                    src="/assets/piy2.png"
-                    alt="Pasta Aberta"
-                    class="pasta-aberta"
-                  />Caderno Verde
-                </summary>
-                <ul class="tree">
-                  <li>
-                    <span><img src="/pdf(2).png" alt="" width="25px" /></span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD10.pdf"
-                      target="_blank"
-                      >Prova</a
-                    >
-                  </li>
-                  <li>
-                    <span><img src="/pdf(2).png" alt="" width="25px" /></span>
-                    <a
-                      href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD10.pdf"
-                      target="_blank"
-                      >Gabarito</a
-                    >
-                  </li>
-                </ul>
-              </details>
-            </div>
-            <!-- Fechamento de details -->
-            <div class="scene">
-              <div class="background"></div>
-              <div class="cat-sprite">
-                <img src="/assets/d8Vlbs.gif" alt="" width="190px" />
-              </div>
-            </div>
-            <!-- Fechamento de .sub-tab-content (id="subtab1") -->
-
-            <div class="sub-tab-content" id="subtab2">
-              <h3>Provas</h3>
-              <!-- Conteúdo para o segundo dia -->
-            </div>
-            <!-- Fechamento de .sub-tab-content (id="subtab2") -->
-          </div>
-          <!-- Fechamento de .tab-content (id="tab2") -->
-
-          <!-- Aba 3 -->
-          <div class="tab-content" id="tab3">
-            <h2>Provas e Gabaritos de 2022</h2>
-            <!-- Sub-Abas -->
-            <div class="sub-tabs">
-              <button class="sub-tab-button active" data-subtab="subtab1">
-                1° Dia
-              </button>
-              <button class="sub-tab-button" data-subtab="subtab2">
-                2° Dia
-              </button>
-            </div>
-            <!-- Fechamento de .sub-tabs -->
-
-            <!-- Conteúdo das Sub-Abas -->
-            <div class="sub-tab-content active" id="subtab1">
-              <h3>Provas</h3>
-              <!-- Conteúdo para o primeiro dia de 2022 -->
-            </div>
-            <!-- Fechamento de .sub-tab-content (id="subtab1") -->
-
-            <div class="sub-tab-content" id="subtab2">
-              <h3>Provas</h3>
-              <!-- Conteúdo para o segundo dia de 2022 -->
-            </div>
-            <!-- Fechamento de .sub-tab-content (id="subtab2") -->
-          </div>
-          <!-- Fechamento de .tab-content (id="tab3") -->
-        </div>
-        <!-- Fechamento de .tab-container -->
-      </div>
-      <!-- Fechamento de .janela -->
     </div>
 
-    <script src="/script/script.js"></script>
-  </body>
+    <div class="body">
+      <!-- Conteúdo da Aba 1 -->
+      <div id="content1" class="tab-content active-content">
+        <div class="sub-tab-bar">
+          <button class="sub-tab active" onclick="showSubContent('subContent1')">1° Dia</button>
+          <button class="sub-tab" onclick="showSubContent('subContent2')">2° Dia </button>
+        </div>
+        <div id="subContent1" class="sub-tab-content active-sub-content">
+
+          <div class="container">
+            <div class="list" style="border-top-left-radius: 4px; border-bottom-left-radius: 4px;">
+              <h3> Cadernos </h3>
+              <ul>
+                <li>Azul</li>
+                <li>Amarelo</li>
+                <li>Branco</li>
+                <li>Rosa</li>
+                <li>Laranja</li>
+                <li>Verde</li>
+              </ul>
+            </div>
+
+            <div class="list" style="border-left: none;">
+              <h3> Prova </h3>
+              <ul>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD1.pdf" targe
+                    style="background-color: #e6f4ff; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #00d2ff;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD2.pdf"
+                    style="background-color: #faf7da; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #caca58;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD3.pdf"
+                    style="background-color: #e7f8e7; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD4.pdf"
+                    style="background-color: #ffebf2; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ff85d5;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD9.pdf"
+                    style="background-color: #ffeccf; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #efad70;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD10.pdf"
+                    style="background-color: #eafbf1; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+              </ul>
+            </div>
+
+            <div class="list" style="border-left: none; border-top-right-radius: 4px; border-bottom-right-radius: 4px;">
+              <h3> Gabarito </h3>
+              <ul>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD1.pdf"
+                    style="background-color: #e6f4ff; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #00d2ff;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD2.pdf"
+                    style="background-color: #faf7da; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ffff00;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD3.pdf"
+                    style="background-color: #e7f8e7; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD4.pdf"
+                    style="background-color: #ffebf2; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ff85d5;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD9.pdf"
+                    style="background-color: #ffeccf; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #efad70;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD10.pdf"
+                    style="background-color: #eafbf1; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="carousel-container">
+
+            <div class="content active-content" id="tab1">
+              <div style="display: flex;">
+                <div style="margin-top: 10vh;">
+                  <h2>Ohayo!</h2>
+                  <p>Aqui você encontra exemplos de redações nota mil, que podem servir como inspiração e referência
+                    para
+                    o desenvolvimento das suas próprias produções.</p>
+                </div>
+                <img src="/assets/Black & White Minimalist Business Logo(10).png" alt="">
+
+              </div>
+            </div>
+            <div class="content" id="tab2">
+              <h2>Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no
+                Brasil</h2>
+              <p> ✏️ Trecho redação nota mil de Heloísa Vitória Silva no Enem 2023</p>
+              <br>
+              <p>
+
+
+                &nbsp;&nbsp;Na obra “Utopia”, de Thomas More, é retratada uma sociedade perfeita e em harmonia, a qual é
+                livre de
+                conflitos e mazelas. Todavia, fora de ficção, a realidade contemporânea está distante disso, haja vista
+                os desafios para enfrentar a invisibilidade do trabalho de cuidado exercido pela mulher no Brasil. Por
+                certo, a negligência governamental e a desigualdade social são fatores que favorecem esse quadro.
+                <br>
+                &nbsp;&nbsp;Percebe-se, a princípio, que o descaso estatal possui íntima relação com o revés. Nessa
+                ótica, de acordo
+                com o filósofo John Locke, configura-se como um rompimento do Contrato Social, já que o Estado não
+                cumpre com sua função de garantir que todos desfrutem de seus direitos. Assim, devido à débil ação do
+                Poder Público e à insuficiência de legislações, os impasses para acabar com a invisibilidade vivenciada
+                por aquelas que realizam o trabalho de cuidadoras, sejam elas babás, donas de casa ou empregadas
+                domésticas, têm crescido cada vez mais no Brasil. Dessa forma, é inadmissível que esse cenário continue
+                a perdurar.
+                <br>
+                &nbsp;&nbsp;Ressalta-se, ademais, a situação de vulnerabilidade em que diversas cuidadoras estão
+                inseridas como
+                impulsionadora do problema. Nesse contexto, segundo o escritor Ariano Suassuna, o Brasil é dividido em
+                dois países distintos: o país dos privilegiados e o país dos despossuídos. Sob esse viés, grande parte
+                dessas mulheres vivem em condições precárias, por isso, tendem a aceitar qualquer coisa e realizam até
+                mesmo trabalhos sem remuneração; o que faz com que as dificuldades para enfrentar essa problemática
+                aumentem e tornem essas mulheres cada dia mais invisíveis perante o corpo social. Destarte, é
+                imprescindível que haja mudança.
+
+
+              </p>
+            </div>
+            <div class="content" id="tab3">
+              <h2>Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no
+                Brasil</h2>
+              <p>✏️ Trecho de redação nota mil de Luana Pizzolato no Enem 2023</p>
+              <br>
+              <p>
+                &nbsp;&nbsp;As décadas finais do século 20, no Brasil, foram marcadas pela presença de movimentos
+                sociais diversos, como o de ruptura das condições de gênero que prejudicavam as mulheres no meio social.
+                Embora as manifestações tenham conquistado direitos, ainda há problemas que assolam o cotidiano feminino
+                das brasileiras, como a invisibilidade do trabalho de cuidado. De fato, essa questão é influenciada pelo
+                sistema capitalista e pela manutenção da visão patriarcal. Logo, é urgente sanar os desafios e enfrentar
+                a problemática.
+                <br>
+                &nbsp;&nbsp;Diante desse cenário, cabe analisar a relação entre o modelo econômico e a invisibilidade
+                referida. Consoante a tese do sociólogo Karl Marx, os donos de produção, no capitalismo, possuem como
+                fim o maior lucro possível. Nessa perspectiva do autor, nota-se que essa mentalidade econômica ainda
+                rege as relações atuais, incluindo as do Brasil. Desse modo, em um contexto que o trabalho de cuidado
+                não reproduz o capital desejado pelas empresas, esse é invisibilizado e mal remunerado. Portanto, é
+                visível que o sistema capitalista é um entrave na questão sofrida pelas mulheres.
+                <br>
+                &nbsp;&nbsp;Ademais, a permanência da visão patriarcal acentua o problema dessa invisibilidade. Tal
+                situação é explicada pois, desde o período colonial do Brasil, as mulheres foram designadas a cumprir
+                funções domésticas e de cuidado, já que não eram vistas como capazes de exercer outro ofício. Nesse
+                cenário, ao relacionar com a atualidade, é nítido que essa convenção social do papel da mulher foi
+                mantido como modo de continuar o privilégio dos homens, detentores do poder. Assim, ao passo que esses
+                se consideram superiores, não há uma luta para valorizar o trabalho de cuidado, já que é visto como
+                função intrínseca e obrigatória do gênero feminino.
+              </p>
+            </div>
+            <button class="carousel-button" onclick="nextTab()">Avançar</button>
+          </div>
+        </div>
+        <div id="subContent2" class="sub-tab-content">
+          <div class="container">
+            <div class="list" style="border-top-left-radius: 4px; border-bottom-left-radius: 4px;">
+              <h3> Cadernos </h3>
+              <ul>
+                <li>Azul</li>
+                <li>Amarelo</li>
+                <li>Cinza</li>
+                <li>Rosa</li>
+                <li>Laranja</li>
+                <li>Verde</li>
+              </ul>
+            </div>
+
+            <div class="list" style="border-left: none;">
+
+              <h3> Prova </h3>
+              <ul>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD7.pdf"
+                    style="background-color: #e6f4ff; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #00d2ff;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD5.pdf"
+                    style="background-color: #faf7da; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #caca58;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD6.pdf"
+                    style="background-color: #e7f8e7; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf"
+                    style="background-color: #ffebf2; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ff85d5;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD11.pdf"
+                    style="background-color: #ffeccf; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #efad70;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD12.pdf"
+                    style="background-color: #eafbf1; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+              </ul>
+            </div>
+
+
+            <div class="list" style="border-left: none; border-top-right-radius: 4px; border-bottom-right-radius: 4px;">
+              <h3> Gabarito </h3>
+              <ul>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D2_CD7.pdf"
+                    style="background-color: #e6f4ff; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #00d2ff;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D2_CD5.pdf"
+                    style="background-color: #faf7da; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ffff00;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D2_CD6.pdf"
+                    style="background-color: #e7f8e7; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D2_CD8.pdf"
+                    style="background-color: #ffebf2; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ff85d5;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D2_CD11.pdf"
+                    style="background-color: #ffeccf; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #efad70;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D2_CD12.pdf"
+                    style="background-color: #eafbf1; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Conteúdo da Aba 2 -->
+      <div id="content2" class="tab-content">
+        <div class="sub-tab-bar">
+          <button class="sub-tab active" onclick="showSubContent('subContent3')">1° Dia</button>
+          <button class="sub-tab" onclick="showSubContent('subContent4')">2° Dia</button>
+        </div>
+        <div id="subContent3" class="sub-tab-content active-sub-content">
+          <div class="container">
+            <div class="list" style="border-top-left-radius: 4px; border-bottom-left-radius: 4px;">
+              <h3> Cadernos </h3>
+              <ul>
+                <li>Azul</li>
+                <li>Amarelo</li>
+                <li>Branco</li>
+                <li>Rosa</li>
+                <li>Laranja</li>
+                <li>Verde</li>
+              </ul> <!-- Fechando a lista de Cadernos -->
+            </div>
+
+            <div class="list" style="border-left: none; border-top-right-radius: 4px; border-bottom-right-radius: 4px;">
+              <h3> Prova </h3>
+              <ul>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D1_CD1.pdf"
+                    style="background-color: #e6f4ff; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #00d2ff;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D1_CD2.pdf"
+                    style="background-color: #faf7da; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #caca58;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D1_CD3.pdf"
+                    style="background-color: #e7f8e7; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D1_CD4.pdf"
+                    style="background-color: #ffebf2; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ff85d5;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D1_CD9.pdf"
+                    style="background-color: #ffeccf; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #efad70;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D1_CD10.pdf"
+                    style="background-color: #eafbf1; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+              </ul> <!-- Fechando a lista de Provas -->
+            </div>
+
+            <div class="list" style="border-left: none; border-top-right-radius: 4px; border-bottom-right-radius: 4px;">
+              <h3> Gabarito </h3>
+              <ul>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D1_CD1.pdf"
+                    style="background-color: #e6f4ff; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #00d2ff;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D1_CD2.pdf"
+                    style="background-color: #faf7da; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ffff00;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D1_CD3.pdf"
+                    style="background-color: #e7f8e7; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D1_CD4.pdf"
+                    style="background-color: #ffebf2; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ff85d5;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D1_CD9.pdf"
+                    style="background-color: #ffeccf; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #efad70;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D1_CD10.pdf"
+                    style="background-color: #eafbf1; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+              </ul> <!-- Fechando a lista de Gabaritos -->
+            </div>
+          </div>
+          
+          
+        </div>
+        
+        
+        <div id="subContent4" class="sub-tab-content active-sub-content">
+          <div class="container">
+            <div class="list" style="border-top-left-radius: 4px; border-bottom-left-radius: 4px;">
+              <h3> Cadernos </h3>
+              <ul>
+                <li>Azul</li>
+                <li>Amarelo</li>
+                <li>Cinza</li>
+                <li>Rosa</li>
+                <li>Laranja</li>
+                <li>Verde</li>
+              </ul> <!-- Fechando a lista de Cadernos -->
+            </div>
+
+            <div class="list" style="border-left: none; border-top-right-radius: 4px; border-bottom-right-radius: 4px;">
+              <h3> Prova </h3>
+              <ul>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD7.pdf"
+                    style="background-color: #e6f4ff; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #00d2ff;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD5.pdf"
+                    style="background-color: #faf7da; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #caca58;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf"
+                    style="background-color: #e7f8e7; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD8.pdf"
+                    style="background-color: #ffebf2; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ff85d5;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD11.pdf"
+                    style="background-color: #ffeccf; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #efad70;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD12.pdf"
+                    style="background-color: #eafbf1; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Prova Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+              </ul> <!-- Fechando a lista de Provas -->
+            </div>
+
+            <div class="list" style="border-left: none; border-top-right-radius: 4px; border-bottom-right-radius: 4px;">
+              <h3> Gabarito </h3>
+              <ul>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D2_CD7.pdf"
+                    style="background-color: #e6f4ff; color: #101010;"> <i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #00d2ff;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D2_CD5.pdf"
+                    style="background-color: #faf7da; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ffff00;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="" style="background-color: #e7f8e7; color: #101010;"> <i
+                      class="fa-duotone fa-solid fa-circle fa-sm" style="--fa-secondary-color: #77dd77;"></i> Gabarito
+                    Disponível <i class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D2_CD8.pdf"
+                    style="background-color: #ffebf2; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #ff85d5;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D2_CD11.pdf"
+                    style="background-color: #ffeccf; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #efad70;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+                <li><a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D2_CD12.pdf"
+                    style="background-color: #eafbf1; color: #101010;"><i class="fa-duotone fa-solid fa-circle fa-sm"
+                      style="--fa-secondary-color: #77dd77;"></i> Gabarito Disponível <i
+                      class="fa-duotone fa-solid fa-download fa-lg"></i></a></li>
+              </ul> <!-- Fechando a lista de Gabaritos -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <script>
+    let currentTabIndex = 0; // Índice da aba atual no carrossel
+    const totalTabs = 3; // Total de abas no carrossel
+
+    function showContent(tabId) {
+      document.querySelectorAll('.tab-content').forEach((content) => {
+        content.classList.remove('active-content');
+      });
+
+      document.querySelectorAll('.tab').forEach((tab) => {
+        tab.classList.remove('active');
+      });
+
+      document.getElementById(tabId).classList.add('active-content');
+      event.currentTarget.classList.add('active');
+
+      const firstSubTab = document.getElementById(tabId).querySelector('.sub-tab');
+      if (firstSubTab) firstSubTab.click();
+
+      // Resetar o carrossel quando uma nova aba principal for selecionada
+      currentTabIndex = 0;
+      updateCarousel();
+    }
+
+    function showSubContent(subTabId) {
+      document.querySelectorAll('.sub-tab-content').forEach((content) => {
+        content.classList.remove('active-sub-content');
+      });
+
+      document.querySelectorAll('.sub-tab').forEach((tab) => {
+        tab.classList.remove('active');
+      });
+
+      document.getElementById(subTabId).classList.add('active-sub-content');
+      event.currentTarget.classList.add('active');
+    }
+
+    function nextTab() {
+      currentTabIndex++;
+      if (currentTabIndex >= totalTabs) {
+        currentTabIndex = 0; // Voltar ao início se ultrapassar
+      }
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      document.querySelectorAll('.content').forEach((content) => {
+        content.classList.remove('active-content');
+      });
+
+      const activeTab = document.getElementById(`tab${currentTabIndex + 1}`);
+      if (activeTab) {
+        activeTab.classList.add('active-content');
+      }
+    }
+
+    function toggleDropdown() {
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      dropdownMenu.classList.toggle('show');
+
+      window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+          dropdownMenu.classList.remove('show');
+        }
+      };
+    }
+  </script>
+</body>
+
 </html>

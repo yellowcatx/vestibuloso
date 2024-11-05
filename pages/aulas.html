@@ -1,196 +1,507 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/pages/css/aulas_estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Aulas</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+  <link rel="stylesheet" href="./css/aulas_estilo.css">
+  <title>VESTIBULOSO</title>
+</head>
 
-  <body>
-    <header>
-    </header>
+<body>
+  <section class="layout">
 
-    <div class="content">
-      <div class="janela">
-        <div class="titulo">
-          <h1>Aulas.exe</h1>
-        </div>
-        <div class="tab-bar">
-          <div class="minimizar"></div>
-          <div class="maximizar"></div>
-          <div class="fechar"></div>
+
+    <!-- Menu de Disciplinas -->
+    <div class="leftSide">
+      <h1>Disciplinas</h1>
+      <div class="buttons">
+        <button onclick="openSubject(event, 'matematica')"><i class="fa-light fa-calculator-simple fa-lg"
+            style="margin-right: 20px;"></i> Matemática</button>
+        <button onclick="openSubject(event, 'portugues')"><i class="fa-regular fa-book-font fa-lg"
+            style="margin-right: 20px;"></i> Português</button>
+
+      </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <div id="inicio" class="subject-content active">
+        <div class="active-content">
+          <div class="dialog_box">
+            <h1 class="titulo">Olá Vestibulosos</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          </div>
+          <img src="/assets/Black & White Minimalist Business Logo(10).png" alt="">
         </div>
       </div>
 
-      <div class="tab-content">
-        <div class="barra">
-          <span><a href>Home</a></span>
-          <span><a href>Provas</a></span>
-          <span> Ajuda</span>
-        </div>
-        <div class="sidebar-container">
-          <div class="sidebar">
-            <div class="menu">
-              <h2>Disciplinas</h2>
-              <ul>
-                <li class="menu-item">
-                  <details>
-                    <summary>Matemática</summary>
-                  </details>
-                </li>
-                <li class="menu-item">
-                  <details>
-                    <summary>Física</summary>
-                  </details>
-                </li>
-                <li class="menu-item">
-                  <details>
-                    <summary>Português</summary>
-                    <ul class="submenu">
-                      <li><a href="#" data-video="https://www.youtube.com/embed/videoID1">Aula 1: Estatística</a></li>
-                      <li>
-                        <a href="#" data-video="https://www.youtube.com/embed/t8OZPJfpcTM?si=KSAqIPefoaM22unZ">
-                          Aula 2: Estatística
-                        </a>
-                      </li>
-                      <li><a href="#" data-video="https://www.youtube.com/embed/videoID3">Aula 3</a></li>
-                      <li><a href="#" data-video="https://www.youtube.com/embed/videoID4">Aula 4</a></li>
-                      <li><a href="#" data-video="https://www.youtube.com/embed/videoID5">Aula 5</a></li>
-                      <li><a href="#" data-video="https://www.youtube.com/embed/videoID6">Aula 6</a></li>
-                    </ul>
-                  </details>
-                </li>
-              </ul>
-            </div>
+      <!--- Matematica -->
+      <div id="matematica" class="subject-content">
+        <div class="tab-bar">
+          <div class="title-bar">
+            <span> <i class="fa-light fa-sidebar fa-xl" style="color: #ffffff;"></i> Aulas/ Disciplinas/ Matemática
+            </span>
           </div>
-          <div id="tab1" class="tab">
-            <h1 style="font-family: 'Fira Code', monospace;">Matemática</h1>
+          <div style="display: flex; align-items: center; gap: 10px; margin-top: 15px; margin-bottom: 15px;">
+            <button style="padding: 5px; border: none; background-color: transparent;"><i class="fa-regular fa-chevron-left" style="color: #000000;"></i></button>
+            <h2>Matemática</h2>
           </div>
-          <div class="iframe-container">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 11px;"><i class="fa-regular fa-circle-play"></i> 9 Aulas <span
+                style="font-size: 11px;"><i class="fa-regular fa-clock"></i> 1h20min</span></span>
 
-            <div class="tab-bar2">
-              <div class="tab-buttons">
-              <div class="minimizar"></div>
-              <div class="maximizar"></div>
-              <div class="fechar"></div>
-            </div>
-            </div>
-            <iframe id="video-player" src frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="note">
-            <div class="tape"></div>
-            <div class="container">
-              <div class="timer">
-                <div class="timer-display" id="timerDisplay">15:00</div>
-                <div class="buttons">
-                  <button id="startBtn">Iniciar</button>
-                  <button id="pauseBtn">Pausar</button> <!-- Novo botão de Pausar -->
-                  <button id="resetBtn">Resetar</button>
+            <div class="container" id="infoContainer">
+
+              <button class="close-btn" onclick="closeContainer()"><i class="fa-regular fa-x fa-sm"
+                  style="color: #000000;"></i></button>
+              <!-- Botão de fechar -->
+
+
+              <div id="welcomeContainer" style="margin:5%;">
+                <h1>Bem-vindo ao Simulado de Matemática!</h1>
+                <div style="display: flex; align-items: center; justify-content: center; line-height: 25px;">
+
+                  <p>
+                    É com muito carinho que preparamos este simulado para você! Aqui, você terá a chance de testar seus
+                    conhecimentos e ver como está se saindo nas aulas. Sabemos que o aprendizado pode ser desafiador, e
+                    é normal ter dúvidas ou dificuldades ao longo do caminho. Este simulado é uma oportunidade de rever
+                    o que aprendeu e se sentir mais confiante.
+                    <br>
+                    Lembre-se de que cada pergunta é uma chance de aprender algo novo, e os erros são apenas parte desse
+                    processo. Se você não acertar alguma questão, não se preocupe! O importante é continuar avançando e
+                    saber que cada passo que você dá conta.
+                    <br>
+
+                    Boa sorte e divirta-se!
+
+                  </p>
+                  <img src="/assets/Black & White Minimalist Business Logo(8).png" width="200px" alt="">
                 </div>
+                <button class="start-button" onclick="startQuiz()">Começar</button>
+              </div>
+              <form id="quizForm" style="display: none;">
+                <div class="question active" id="question1" style="position:relative; top: 100px">
+                  <strong>
+                    <p>1. Qual é a solução da equação 2x + 4 = 20?</p>
+                  </strong>
+                  <div class="choices">
+                    <input type="radio" name="q1" value="8x" id="q1a" required>
+                    <label for="q1a">8x</label>
+                    <input type="radio" name="q1" value="11" id="q1b">
+                    <label for="q1b">11</label>
+                    <input type="radio" name="q1" value="10" id="q1c">
+                    <label for="q1c">10</label>
+                    <input type="radio" name="q1" value="9" id="q1d">
+                    <label for="q1d">9</label>
+                  </div>
+                  <button type="button" class="start-button" onclick="nextQuestion(1)">Próxima</button>
+                </div>
+                <div class="question" id="question2" style="position:relative; top: 100px">
+                  <strong>
+                    <p>2. Qual é o valor de 5 + 6?</p>
+                  </strong>
+                  <div class="choices">
+                    <input type="radio" name="q2" value="10" id="q2a" required>
+                    <label for="q2a">10</label>
+                    <input type="radio" name="q2" value="11" id="q2b">
+                    <label for="q2b">11</label>
+                    <input type="radio" name="q2" value="12" id="q2c">
+                    <label for="q2c">12</label>
+                    <input type="radio" name="q2" value="13" id="q2d">
+                    <label for="q2d">13</label>
+                  </div>
+                  <button type="button" class="start-button" onclick="nextQuestion(2)">Próxima</button>
+                </div>
+                <div class="question" id="question3" style="position:relative; top: 100px">
+                  <strong>
+                    <p>3. Se 3x = 15, qual é o valor de x?</p>
+                  </strong>
+                  <div class="choices">
+                    <input type="radio" name="q3" value="3" id="q3a" required>
+                    <label for="q3a">3</label>
+                    <input type="radio" name="q3" value="4" id="q3b">
+                    <label for="q3b">4</label>
+                    <input type="radio" name="q3" value="5" id="q3c">
+                    <label for="q3c">5</label>
+                    <input type="radio" name="q3" value="6" id="q3d">
+                    <label for="q3d">6</label>
+                  </div>
+                  <button type="button" class="start-button" onclick="nextQuestion(3)">Próxima</button>
+                </div>
+                <div class="question" id="question4" style="position:relative; top: 100px">
+                  <strong>
+                    <p>4. Qual é o resultado de 10 - 3 + 5?</p>
+                  </strong>
+                  <div class="choices">
+                    <input type="radio" name="q4" value="12" id="q4a" required>
+                    <label for="q4a">12</label>
+                    <input type="radio" name="q4" value="13" id="q4b">
+                    <label for="q4b">13</label>
+                    <input type="radio" name="q4" value="19" id="q4c">
+                    <label for="q4c">19</label>
+                    <input type="radio" name="q4" value="15" id="q4d">
+                    <label for="q4d">15</label>
+                  </div>
+                  <button type="button" class="start-button" onclick="nextQuestion(4)">Próxima</button>
+                </div>
+                <div class="question" id="question5" style="position:relative; top: 100px">
+                  <strong>
+                    <p>5. O que é 25% de 20?</p>
+                  </strong>
+                  <div class="choices">
+                    <input type="radio" name="q5" value="5" id="q5a" required>
+                    <label for="q5a">5</label>
+                    <input type="radio" name="q5" value="10" id="q5b">
+                    <label for="q5b">10</label>
+                    <input type="radio" name="q5" value="15" id="q5c">
+                    <label for="q5c">15</label>
+                    <input type="radio" name="q5" value="20" id="q5d">
+                    <label for="q5d">20</label>
+                  </div>
+                  <button type="button" class="start-button" onclick="nextQuestion(5)">Próxima</button>
+                </div>
+                <div class="question" id="question6" style="position:relative; top: 100px">
+                  <strong>
+                    <p>6. O que significa a variável x em uma equação?</p>
+                  </strong>
+                  <div class="choices">
+                    <input type="radio" name="q6" value="O número multiplicado pela variável" id="q6a" required>
+                    <label for="q6a">O número multiplicado pela variável</label>
+                    <input type="radio" name="q6" value="Um valor fixo" id="q6b">
+                    <label for="q6b">Um valor fixo</label>
+                    <input type="radio" name="q6" value="O resultado de uma operação" id="q6c">
+                    <label for="q6c">O resultado de uma operação</label>
+                    <input type="radio" name="q6" value="Um número inteiro" id="q6d">
+                    <label for="q6d">Um número inteiro</label>
+                  </div>
+                  <button type="button" class="start-button" onclick="nextQuestion(6)">Próxima</button>
+                </div>
+                <div class="question" id="question7" style="position:relative; top: 100px">
+                  <strong>
+                    <p>7. Se x = 2, qual é o valor de 2x + 10?</p>
+                  </strong>
+                  <div class="choices">
+                    <input type="radio" name="q7" value="10" id="q7a" required>
+                    <label for="q7a">10</label>
+                    <input type="radio" name="q7" value="12" id="q7b">
+                    <label for="q7b">12</label>
+                    <input type="radio" name="q7" value="14" id="q7c">
+                    <label for="q7c">14</label>
+                    <input type="radio" name="q7" value="16" id="q7d">
+                    <label for="q7d">16</label>
+                  </div>
+                  <button type="button" class="start-button" onclick="nextQuestion(7)">Próxima</button>
+                </div>
+                <div class="question" id="question8" style="position:relative; top: 100px">
+                  <strong>
+                    <p>8. Qual é a raiz quadrada de 64?</p>
+                  </strong>
+                  <div class="choices">
+                    <input type="radio" name="q8" value="6" id="q8a" required>
+                    <label for="q8a">6</label>
+                    <input type="radio" name="q8" value="7" id="q8b">
+                    <label for="q8b">7</label>
+                    <input type="radio" name="q8" value="8" id="q8c">
+                    <label for="q8c">8</label>
+                    <input type="radio" name="q8" value="9" id="q8d">
+                    <label for="q8d">9</label>
+                  </div>
+                  <button type="button" class="start-button" onclick="nextQuestion(8)">Próxima</button>
+                </div>
+                <div class="question" id="question9" style="position:relative; top: 100px">
+                  <strong>
+                    <p>9. O que é 1/4 de 100?</p>
+                  </strong>
+                  <div class="choices">
+                    <input type="radio" name="q9" value="20" id="q9a" required>
+                    <label for="q9a">20</label>
+                    <input type="radio" name="q9" value="25" id="q9b">
+                    <label for="q9b">25</label>
+                    <input type="radio" name="q9" value="30" id="q9c">
+                    <label for="q9c">30</label>
+                    <input type="radio" name="q9" value="40" id="q9d">
+                    <label for="q9d">40</label>
+                  </div>
+                  <button type="button" class="start-button" onclick="nextQuestion(9)">Próxima</button>
+                </div>
+                <div class="question" id="question10" style="position:relative; top: 100px">
+                  <strong>
+                    <p>10. Qual é a soma dos ângulos internos de um triângulo?</p>
+                  </strong>
+                  <div class="choices">
+                    <input type="radio" name="q10" value="90°" id="q10a" required>
+                    <label for="q10a">90°</label>
+                    <input type="radio" name="q10" value="180°" id="q10b">
+                    <label for="q10b">180°</label>
+                    <input type="radio" name="q10" value="270°" id="q10c">
+                    <label for="q10c">270°</label>
+                    <input type="radio" name="q10" value="360°" id="q10d">
+                    <label for="q10d">360°</label>
+                  </div>
+                  <button type="button" class="start-button" onclick="calculateResults()">Finalizar</button>
+                </div>
+              </form>
+              <div id="resultContainer" class="result-container" style="position:relative; top: 100px">
+                <h2>Resultados</h2>
+                <p id="resultMessage"></p>
+                <button class="start-button" onclick="restartQuiz()">Reiniciar</button>
               </div>
             </div>
+
+            <button class="button" id="toggleButton" onclick="toggleContainer()">Atividade</button>
           </div>
         </div>
 
-        <!-- Conteúdo da aba 2 -->
-        <div id="tab2" class="tab" style="display:none">
-          <h1>Português</h1>
-          <p>Conteúdo da aba de Português.</p>
+        <div class="iframe-container">
+          <iframe id="video-player" src="" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="text-content">
+
+          <h2>Disciplina: Introdução à Álgebra para o ENEM! 📘✨</h2>
+          <p>
+
+            Seja bem-vindo(a) à disciplina que vai ajudar a dominar Álgebra de forma prática e focada para o ENEM! Vamos
+            explorar conceitos essenciais como operações básicas, equações, expressões algébricas e sistemas lineares,
+            sempre com exercícios e exemplos para facilitar o aprendizado.
+
+            A cada aula, o conteúdo será voltado para estratégias que ajudam a ganhar tempo e precisão nas questões do
+            ENEM. E, para finalizar, teremos um aulão especial de Matemática com uma revisão dos tópicos mais cobrados e
+            dicas para resolver questões com confiança.
+
+            Vamos nessa para garantir uma base forte e aumentar suas chances de sucesso no exame!
+
+          </p>
+          <h2>O que vai aprender?</h2>
+          <ol>
+            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Definição e Diferença </li>
+            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Expressões Algébricas </li>
+            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Operações com Variáveis </li>
+            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Funções Básicas </li>
+            <li><i class="fa-regular fa-check" style="color: #ff8040;"></i> Sistema de Equações </li>
+          </ol>
+        </div>
+
+      </div>
+
+      <!--- Portugues -->
+      <div id="portugues" class="subject-content">
+        <div class="tab-bar">
+          <div class="title-bar">
+            <span> <i class="fa-light fa-sidebar fa-xl" style="color: #000000;"></i> Aulas/ Disciplinas/ Português
+            </span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-top: 15px; margin-bottom: 15px;">
+            <button
+              style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; background-color: transparent; border: 1px solid; border-radius: 4px;"><i
+                class="fa-regular fa-chevron-left" style="color: #000000;"></i></button>
+            <h2>Português</h2>
+          </div>
+          <span style="font-size: 11px;"><i class="fa-regular fa-circle-play"></i> 12 Aulas</span>
+          <span style="font-size: 11px;"><i class="fa-regular fa-clock"></i> 2h14min</span>
+        </div>
+
+        <div class="iframe-container">
+          <iframe id="video-player" src="" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="text-content">
+          <h2>Lorem, ipsum.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            consequuntur eligendi exercitationem repudiandae ipsum debitis officiis harum in consectetur officia
+            nesciunt consequatur voluptates, repellendus neque hic numquam facere est, autem placeat. Veniam,
+            praesentium minima! Neque, iure nihil?</p>
         </div>
       </div>
     </div>
 
-    <script>
-    // Controle das Abas Principais
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
+    <!-- Lista de Aulas (Específica para cada Disciplina) -->
+    <div class="rightSide">
+      <!-- Aulas de Matemática -->
+      <div id="matematica-lessons" class="lesson-content">
+        <h2 style="margin-left: 10px; margin: 10px 10px 10px 10px;">Matemática</h2>
 
-    tabButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
+        <details>
+          <summary><span class="title">01: Introdução a Álgebra</span> <span class="time">28 min</span> <span
+              class="icone"><i class="fa fa-chevron-right rotate-icon"></i></span></summary>
+          <ul>
+            <li><a href="#" data-video="https://www.youtube.com/embed/ApcEUtwJgQc?si=RbHrsyemMM9LsuVY">Aula 1: EQUAÇÕES
+                RACIONAIS<span>6 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/KmhmrzNgnzM?si=_8of5vBDx8HHX13p">Aula 2: EQUAÇÕES
+                <span>10 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/j1M641MRasM?si=M3evEdJ0nNh-1UIU">Aula 3:
+                PROPRIEDADE DISTRIBUTIVA<span> 6 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/JJym3OAGa54?si=EpFBYII1sAYQ6vRj">Aula 4: INCÓGNITA
+                <span>6 min</span></a></li>
+          </ul>
+        </details>
 
-        button.classList.add('active');
-        const activeTabContent = document.getElementById(button.dataset.tab);
-        activeTabContent.classList.add('active');
-      });
-    });
+        <details>
+          <summary><span class="title">02: Álgebra</span> <span class="time">37 min</span> <span class="icone"><i
+                class="fa fa-chevron-right rotate-icon"></i></span></summary>
+          <ul>
+            <li><a href="#" data-video="https://www.youtube.com/embed/iz68JiWWIcY?si=R22r01uCLXMKMXak">Aula 1:
+                POLINÔMIOS <span>10 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/pi8vdPACPoI?si=IlADdz9pQ5q2sBxu">Aula 2: EQUAÇÕES
+                COM EXPOENTES <span> 9 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/j1M641MRasM?si=BwDRslfmM1dh0Uto">Aula 3: EQUAÇÕES
+                COM DUAS VARIÁVEIS <span>7 min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/uNtO-ChhKZw?si=ymdCM_FQ2hoJJXFl">Aula 4: REGRA DE
+                TRÊS <span> 11 min</span></a></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span class="title">03: Aulão</span> <span class="time">15 min</span> <span class="icone"><i
+                class="fa fa-chevron-right rotate-icon"></i></span></summary>
+          <ul>
+            <li><a href="#" data-video="https://www.youtube.com/embed/iz68JiWWIcY?si=R22r01uCLXMKMXak">Aula 1: AULÃO
+                <span>6 min</span></a></li>
+          </ul>
+        </details>
+      </div>
 
-    // Controle do Player de Video
+      <!-- Aulas de Português -->
+
+      <div id="portugues-lessons" class="lesson-content">
+        <h2 style="margin-left: 10px;">Aulas</h2>
+        <details>
+          <summary>01: <span>15 min</span> <span class="icone"><i class="fa fa-chevron-right rotate-icon"></i></span>
+          </summary>
+          <ul>
+            <li><a href="#" data-video="https://www.youtube.com/embed/abcd1234">Aula 1: Substantivos <span>5
+                  min</span></a></li>
+            <li><a href="#" data-video="https://www.youtube.com/embed/efgh5678">Aula 2: Verbos <span>8 min</span></a>
+            </li>
+
+          </ul>
+        </details>
+
+      </div>
+    </div>
+
+    <div class="footer"></div>
+  </section>
+
+  <!-- Script -->
+  <script>
+    function openSubject(event, subject) {
+      // Ativando o conteúdo da disciplina e das lições
+      const subjects = document.querySelectorAll('.subject-content');
+      const lessons = document.querySelectorAll('.lesson-content');
+      const buttons = document.querySelectorAll('.buttons button');
+
+      subjects.forEach((content) => content.classList.remove('active'));
+      lessons.forEach((lesson) => lesson.classList.remove('active'));
+      buttons.forEach((button) => button.classList.remove('active'));
+
+      document.getElementById(subject).classList.add('active');
+      document.getElementById(`${subject}-lessons`).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('.submenu a');
+      const links = document.querySelectorAll('.lesson-content a');
       const iframe = document.getElementById('video-player');
 
       links.forEach(link => {
         link.addEventListener('click', (event) => {
-          event.preventDefault(); // Impede o link de abrir em outra aba
-          const videoUrl = link.getAttribute('data-video'); // Obtém a URL do vídeo a partir do atributo 'data-video'
-          iframe.src = videoUrl; // Define o src do iframe com a URL do vídeo
+          event.preventDefault();
+          const videoUrl = link.getAttribute('data-video');
+          iframe.src = videoUrl;
         });
       });
     });
 
-    const timerDisplay = document.getElementById('timerDisplay');
-const startBtn = document.getElementById('startBtn');
-const pauseBtn = document.getElementById('pauseBtn'); // Botão de Pausar
-const resetBtn = document.getElementById('resetBtn');
 
-let timer;
-let timeLeft = 15 * 60; // 15 minutos
-let isRunning = false;  // Variável para verificar se o temporizador está rodando
 
-// Função para atualizar o display do temporizador
-function updateDisplay() {
-  const minutes = Math.floor(timeLeft / 60);
-  const seconds = timeLeft % 60;
-  timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-}
 
-// Função para iniciar o temporizador
-function startTimer() {
-  if (!isRunning) {  // Inicia o timer apenas se não estiver rodando
-    isRunning = true;
-    timer = setInterval(() => {
-      if (timeLeft <= 0) {
-        clearInterval(timer);
+    function toggleContainer() {
+      const container = document.getElementById('infoContainer');
+      const button = document.getElementById('toggleButton');
+
+      // Alterna a exibição do container e do botão
+      const isVisible = container.style.display !== 'none' && container.style.display !== '';
+      container.style.display = isVisible ? 'none' : 'block'; // Mostra ou esconde o container
+      button.style.display = isVisible ? 'block' : 'none'; // Mostra ou esconde o botão
+    }
+
+    function closeContainer() {
+      const container = document.getElementById('infoContainer');
+      const button = document.getElementById('toggleButton');
+
+      container.style.display = 'none'; // Esconde o container
+      button.style.display = 'block'; // Mostra o botão
+    }
+
+    let currentQuestion = 0;
+    const totalQuestions = 10;
+
+    function startQuiz() {
+      document.getElementById("welcomeContainer").style.display = "none";
+      document.getElementById("quizForm").style.display = "block";
+      currentQuestion = 1;
+      showQuestion(currentQuestion);
+    }
+
+    function showQuestion(questionNumber) {
+      document.querySelectorAll(".question").forEach(q => q.classList.remove("active")); // Esconde todas as perguntas
+      const currentQuestionElement = document.getElementById(`question${questionNumber}`);
+      if (currentQuestionElement) {
+        currentQuestionElement.classList.add("active"); // Mostra a pergunta atual
+      }
+    }
+
+    function nextQuestion() {
+      const selectedAnswer = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+
+      if (!selectedAnswer) {
+        alert("Por favor, selecione uma resposta.");
         return;
       }
-      timeLeft--;
-      updateDisplay();
-    }, 1000);
-  }
-}
 
-// Função para pausar o temporizador
-function pauseTimer() {
-  if (isRunning) {
-    clearInterval(timer);  // Pausa o temporizador
-    isRunning = false;
-  }
-}
+      currentQuestion++; // Incrementa o número da pergunta
+      if (currentQuestion <= totalQuestions) {
+        showQuestion(currentQuestion);
+      } else {
+        calculateResults();
+      }
+    }
 
-// Função para resetar o temporizador
-function resetTimer() {
-  clearInterval(timer);  // Para o temporizador
-  isRunning = false;
-  timeLeft = 15 * 60;  // Reseta o tempo para 15 minutos
-  updateDisplay();
-}
+    function calculateResults() {
+      document.getElementById("quizForm").style.display = "none";
+      document.getElementById("resultContainer").style.display = "flex";
 
-// Eventos para os botões
-startBtn.addEventListener('click', startTimer);
-pauseBtn.addEventListener('click', pauseTimer); // Pausar
-resetBtn.addEventListener('click', resetTimer);
+      let score = 0;
+      const answers = ["8x", "11", "5", "12", "5", "O número multiplicado pela variável", "14", "8", "25", "180°"];
 
-updateDisplay(); // Inicializa o display do temporizador
+      answers.forEach((answer, index) => {
+        if (document.querySelector(`input[name="q${index + 1}"]:checked`)?.value === answer) {
+          score++;
+        }
+      });
+
+      const resultMessage = `Você acertou ${score} de ${totalQuestions} perguntas!`;
+      document.getElementById("resultMessage").textContent = resultMessage;
+    }
+
+    function restartQuiz() {
+      document.getElementById("resultContainer").style.display = "none";
+      document.getElementById("welcomeContainer").style.display = "block";
+      currentQuestion = 1; // Reinicia o número da pergunta
+      document.querySelectorAll(".question").forEach(q => q.classList.remove("active"));
+      document.querySelectorAll('input[type="radio"]:checked').forEach(input => input.checked = false);
+    }
+
+
+
+
+
 
 
   </script>
-
-  </body>
+</body>
 
 </html>
